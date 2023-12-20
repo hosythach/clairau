@@ -787,10 +787,12 @@ def init_model(cfg: Dict[str, any]) -> Tuple[ClairaudienceForConditionalGenerati
     feature_extractor = whisper_feature_extractor
     tokenizer = WhisperTokenizer.from_pretrained(model_name, language=cfg["model_force_lang"], task="transcribe")
     processor = WhisperProcessor.from_pretrained(model_name, language=cfg["model_force_lang"], task="transcribe")
+    
     return model, feature_extractor, tokenizer, processor
 
 
 def whisper_feature_extractor(raw_audio: np.array):
     audio_padded = whisper.pad_or_trim(raw_audio.flatten())
     input_feature = whisper.log_mel_spectrogram(audio_padded)
+    
     return input_feature

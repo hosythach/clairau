@@ -13,7 +13,7 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(f"{cur_dir}/..")
 
 # NOTE: ACP only config
-nltk.data.path.append("/proj/gpu_d_98001/proj_asr/nltk")
+nltk.data.path.append("./proj/gpu_d_98001/proj_asr/nltk") # how to get path when i change env
 
 from clairaudience.model import whisper_feature_extractor
 

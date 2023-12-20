@@ -5,8 +5,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("path", type=str, default=None, help="datast path for datasets.load_dataset")
     parser.add_argument("--name", type=str, default=None, help="datast name for datasets.load_dataset")
-    parser.add_argument("--save_dir", type=str, default="/data/proj_asr/hf_dd_data", help="Dataset stored in DatasetDict format")
-    parser.add_argument("--cache_dir", type=str, default="/data/proj_asr/hf_data", help="Directory that stores the dataset")
+    parser.add_argument("--save_dir", type=str, default="./data/proj_asr/hf_dd_data", help="Dataset stored in DatasetDict format")
+    parser.add_argument("--cache_dir", type=str, default="./data/proj_asr/hf_data", help="Directory that stores the dataset")
     parser.add_argument("--num_proc", type=int, default=4, help="Num. of proc. to process the dataset")
     
     args = parser.parse_args()
